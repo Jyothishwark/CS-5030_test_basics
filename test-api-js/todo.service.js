@@ -22,18 +22,27 @@ class todoservice{
         return this.todos;
     }
 
-    add_todo(todo){
-        // Your code here
+    add_todo(todo) {
+        this.todo_data.todo.push(todo);
     }
+
 
     delete_todo(id){
         // Your code here
+        this.todos=this.todo_data;
+
+        console.log("Delete ");
+        console.log(this.todo_data.todo);
+        return this.todos;
     }
 
     update_todo(id, todo){
         // Your code here
+        this.todos["todo"][id] = todo;
+        return true;
     }
 }
+
 
 
 module.exports= todoservice;
