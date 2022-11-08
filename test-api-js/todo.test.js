@@ -29,4 +29,12 @@ describe('todo test suite', () => {
         "done": false})
         expect(todo_service.get_todos().todo.length).toEqual(4);
     });
+
+    test("Delete",()=>{
+        todo_service.delete_todo("T1")
+      expect(todo_service.get_todos().todo.length).toEqual(3);
+
+    });
+
+
 });
