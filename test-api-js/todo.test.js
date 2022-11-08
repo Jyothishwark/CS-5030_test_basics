@@ -36,5 +36,14 @@ describe('todo test suite', () => {
 
     });
 
+    test("update_todos", () => {
+        let todo_service = new todoservice();
+        todo_service.add_todo("title");
+        
+        expect(todo_service.get_todos().todo[3]).toEqual("title");
+        todo_service.update_todo(3, "new");
+        
+        expect(todo_service.get_todos().todo[3]).toEqual("new");
+    });
 
 });
